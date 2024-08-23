@@ -1,0 +1,57 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container {
+    width: 625px;
+    height: 625px;
+    background-image: url('homer.jpg');
+    background-size: 1250px 1250px; /* Double the size to allow for quadrant positioning */
+}
+
+@media (max-width: 600px) {
+    .image-container {
+        background-position: 0 0; /* Top-left */
+    }
+}
+
+@media (min-width: 601px) and (max-width: 800px) {
+    .image-container {
+        background-position: -625px 0; /* Top-right */
+    }
+}
+
+@media (min-width: 801px) and (max-width: 1000px) {
+    .image-container {
+        background-position: 0 -625px; /* Bottom-left */
+    }
+}
+
+@media (min-width: 1001px) and (max-width: 1200px) {
+    .image-container {
+        background-position: -625px -625px; /* Bottom-right */
+    }
+}
+
+@media (min-width: 1201px) and (max-width: 1400px) {
+    .image-container {
+        background-position: 0 -625px; /* Bottom-left */
+    }
+}
+
+@media (min-width: 1401px) and (max-width: 1600px) {
+    .image-container {
+        background-position: -625px 0; /* Top-right */
+    }
+}
+
+@media (min-width: 1601px) {
+    .image-container {
+        background-position: 0 0; /* Top-left */
+    }
+}
